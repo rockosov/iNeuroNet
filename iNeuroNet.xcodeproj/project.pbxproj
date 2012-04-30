@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		320E8C7D154DD3250032F6CD /* neurons.m in Sources */ = {isa = PBXBuildFile; fileRef = 320E8C7C154DD3250032F6CD /* neurons.m */; };
 		326FAEAA1548134000DE8F77 /* neuronetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */; };
+		32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32DA59BA154C3E5F00C5C120 /* brain.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -19,12 +21,14 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* neuronet_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neuronet_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		320E8C7B154DD3250032F6CD /* neurons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = neurons.h; path = src/neurons.h; sourceTree = "<group>"; };
+		320E8C7C154DD3250032F6CD /* neurons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = neurons.m; path = src/neurons.m; sourceTree = "<group>"; };
 		326FAEA81548134000DE8F77 /* neuronetAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = neuronetAppDelegate.h; path = src/neuronetAppDelegate.h; sourceTree = "<group>"; };
 		326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = neuronetAppDelegate.m; path = src/neuronetAppDelegate.m; sourceTree = "<group>"; };
+		32DA59BA154C3E5F00C5C120 /* brain.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = brain.icns; path = icons/brain.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iNeuroNet-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iNeuroNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNeuroNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -44,6 +48,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				320E8C7B154DD3250032F6CD /* neurons.h */,
+				320E8C7C154DD3250032F6CD /* neurons.m */,
 				326FAEA81548134000DE8F77 /* neuronetAppDelegate.h */,
 				326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */,
 			);
@@ -91,7 +97,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3F00F4B6AF500CF3369 /* neuronet_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -100,6 +105,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32DA59BA154C3E5F00C5C120 /* brain.icns */,
 				8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -164,6 +170,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +183,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				326FAEAA1548134000DE8F77 /* neuronetAppDelegate.m in Sources */,
+				320E8C7D154DD3250032F6CD /* neurons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
