@@ -3,7 +3,7 @@
 //  neuronet
 //
 //  Created by rockosov on 25.04.12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 TIT_SFEDU. All rights reserved.
 //
 
 #import "neuronetAppDelegate.h"
