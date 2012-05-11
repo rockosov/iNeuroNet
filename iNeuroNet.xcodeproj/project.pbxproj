@@ -8,8 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		320E8C7D154DD3250032F6CD /* neurons.m in Sources */ = {isa = PBXBuildFile; fileRef = 320E8C7C154DD3250032F6CD /* neurons.m */; };
-		326FAEAA1548134000DE8F77 /* neuronetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */; };
+		320E8C7D154DD3250032F6CD /* Neurons.m in Sources */ = {isa = PBXBuildFile; fileRef = 320E8C7C154DD3250032F6CD /* Neurons.m */; };
+		32394E401551B1B900DFC8D2 /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32394E3F1551B1B900DFC8D2 /* ImageView.m */; };
+		325240FD155A86F000C25863 /* 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E5155A86F000C25863 /* 1.bmp */; };
+		325240FE155A86F000C25863 /* 10.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E6155A86F000C25863 /* 10.bmp */; };
+		325240FF155A86F000C25863 /* 11.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E7155A86F000C25863 /* 11.bmp */; };
+		32524100155A86F000C25863 /* 12.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E8155A86F000C25863 /* 12.bmp */; };
+		32524101155A86F000C25863 /* 13.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E9155A86F000C25863 /* 13.bmp */; };
+		32524102155A86F000C25863 /* 14.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240EA155A86F000C25863 /* 14.bmp */; };
+		32524103155A86F000C25863 /* 15.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240EB155A86F000C25863 /* 15.bmp */; };
+		32524104155A86F000C25863 /* 16.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240EC155A86F000C25863 /* 16.bmp */; };
+		32524105155A86F000C25863 /* 17.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240ED155A86F000C25863 /* 17.bmp */; };
+		32524106155A86F000C25863 /* 18.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240EE155A86F000C25863 /* 18.bmp */; };
+		32524107155A86F000C25863 /* 19.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240EF155A86F000C25863 /* 19.bmp */; };
+		32524108155A86F000C25863 /* 2.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F0155A86F000C25863 /* 2.bmp */; };
+		32524109155A86F000C25863 /* 20.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F1155A86F000C25863 /* 20.bmp */; };
+		3252410A155A86F000C25863 /* 21.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F2155A86F000C25863 /* 21.bmp */; };
+		3252410B155A86F000C25863 /* 22.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F3155A86F000C25863 /* 22.bmp */; };
+		3252410C155A86F000C25863 /* 23.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F4155A86F000C25863 /* 23.bmp */; };
+		3252410D155A86F000C25863 /* 24.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F5155A86F000C25863 /* 24.bmp */; };
+		3252410E155A86F000C25863 /* 3.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F6155A86F000C25863 /* 3.bmp */; };
+		3252410F155A86F000C25863 /* 4.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F7155A86F000C25863 /* 4.bmp */; };
+		32524110155A86F000C25863 /* 5.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F8155A86F000C25863 /* 5.bmp */; };
+		32524111155A86F000C25863 /* 6.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240F9155A86F000C25863 /* 6.bmp */; };
+		32524112155A86F000C25863 /* 7.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FA155A86F000C25863 /* 7.bmp */; };
+		32524113155A86F000C25863 /* 8.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FB155A86F000C25863 /* 8.bmp */; };
+		32524114155A86F000C25863 /* 9.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FC155A86F000C25863 /* 9.bmp */; };
+		326FAEAA1548134000DE8F77 /* NeuronetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */; };
+		329CC529154EFAB2003B196A /* Perceptron.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CC528154EFAB2003B196A /* Perceptron.m */; };
 		32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32DA59BA154C3E5F00C5C120 /* brain.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -24,10 +50,38 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		320E8C7B154DD3250032F6CD /* neurons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = neurons.h; path = src/neurons.h; sourceTree = "<group>"; };
-		320E8C7C154DD3250032F6CD /* neurons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = neurons.m; path = src/neurons.m; sourceTree = "<group>"; };
-		326FAEA81548134000DE8F77 /* neuronetAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = neuronetAppDelegate.h; path = src/neuronetAppDelegate.h; sourceTree = "<group>"; };
-		326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = neuronetAppDelegate.m; path = src/neuronetAppDelegate.m; sourceTree = "<group>"; };
+		320E8C7B154DD3250032F6CD /* Neurons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Neurons.h; path = src/Neurons.h; sourceTree = "<group>"; };
+		320E8C7C154DD3250032F6CD /* Neurons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Neurons.m; path = src/Neurons.m; sourceTree = "<group>"; };
+		32394E3E1551B1B900DFC8D2 /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageView.h; path = src/ImageView.h; sourceTree = "<group>"; };
+		32394E3F1551B1B900DFC8D2 /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageView.m; path = src/ImageView.m; sourceTree = "<group>"; };
+		325240E5155A86F000C25863 /* 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 1.bmp; sourceTree = "<group>"; };
+		325240E6155A86F000C25863 /* 10.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 10.bmp; sourceTree = "<group>"; };
+		325240E7155A86F000C25863 /* 11.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 11.bmp; sourceTree = "<group>"; };
+		325240E8155A86F000C25863 /* 12.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 12.bmp; sourceTree = "<group>"; };
+		325240E9155A86F000C25863 /* 13.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 13.bmp; sourceTree = "<group>"; };
+		325240EA155A86F000C25863 /* 14.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 14.bmp; sourceTree = "<group>"; };
+		325240EB155A86F000C25863 /* 15.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 15.bmp; sourceTree = "<group>"; };
+		325240EC155A86F000C25863 /* 16.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 16.bmp; sourceTree = "<group>"; };
+		325240ED155A86F000C25863 /* 17.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 17.bmp; sourceTree = "<group>"; };
+		325240EE155A86F000C25863 /* 18.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 18.bmp; sourceTree = "<group>"; };
+		325240EF155A86F000C25863 /* 19.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 19.bmp; sourceTree = "<group>"; };
+		325240F0155A86F000C25863 /* 2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 2.bmp; sourceTree = "<group>"; };
+		325240F1155A86F000C25863 /* 20.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 20.bmp; sourceTree = "<group>"; };
+		325240F2155A86F000C25863 /* 21.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 21.bmp; sourceTree = "<group>"; };
+		325240F3155A86F000C25863 /* 22.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 22.bmp; sourceTree = "<group>"; };
+		325240F4155A86F000C25863 /* 23.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 23.bmp; sourceTree = "<group>"; };
+		325240F5155A86F000C25863 /* 24.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 24.bmp; sourceTree = "<group>"; };
+		325240F6155A86F000C25863 /* 3.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 3.bmp; sourceTree = "<group>"; };
+		325240F7155A86F000C25863 /* 4.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 4.bmp; sourceTree = "<group>"; };
+		325240F8155A86F000C25863 /* 5.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 5.bmp; sourceTree = "<group>"; };
+		325240F9155A86F000C25863 /* 6.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 6.bmp; sourceTree = "<group>"; };
+		325240FA155A86F000C25863 /* 7.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 7.bmp; sourceTree = "<group>"; };
+		325240FB155A86F000C25863 /* 8.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 8.bmp; sourceTree = "<group>"; };
+		325240FC155A86F000C25863 /* 9.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 9.bmp; sourceTree = "<group>"; };
+		326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NeuronetAppDelegate.h; path = src/NeuronetAppDelegate.h; sourceTree = "<group>"; };
+		326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeuronetAppDelegate.m; path = src/NeuronetAppDelegate.m; sourceTree = "<group>"; };
+		329CC527154EFAB2003B196A /* Perceptron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Perceptron.h; path = src/Perceptron.h; sourceTree = "<group>"; };
+		329CC528154EFAB2003B196A /* Perceptron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Perceptron.m; path = src/Perceptron.m; sourceTree = "<group>"; };
 		32DA59BA154C3E5F00C5C120 /* brain.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = brain.icns; path = icons/brain.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iNeuroNet-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iNeuroNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNeuroNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,10 +102,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				320E8C7B154DD3250032F6CD /* neurons.h */,
-				320E8C7C154DD3250032F6CD /* neurons.m */,
-				326FAEA81548134000DE8F77 /* neuronetAppDelegate.h */,
-				326FAEA91548134000DE8F77 /* neuronetAppDelegate.m */,
+				329CC527154EFAB2003B196A /* Perceptron.h */,
+				32394E3E1551B1B900DFC8D2 /* ImageView.h */,
+				32394E3F1551B1B900DFC8D2 /* ImageView.m */,
+				329CC528154EFAB2003B196A /* Perceptron.m */,
+				320E8C7B154DD3250032F6CD /* Neurons.h */,
+				320E8C7C154DD3250032F6CD /* Neurons.m */,
+				326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */,
+				326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -105,7 +163,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32DA59BA154C3E5F00C5C120 /* brain.icns */,
+				325240E4155A86F000C25863 /* images */,
+				329B17EB1559228100A2C7F9 /* icons */,
 				8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -120,6 +179,45 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		325240E4155A86F000C25863 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				325240E5155A86F000C25863 /* 1.bmp */,
+				325240E6155A86F000C25863 /* 10.bmp */,
+				325240E7155A86F000C25863 /* 11.bmp */,
+				325240E8155A86F000C25863 /* 12.bmp */,
+				325240E9155A86F000C25863 /* 13.bmp */,
+				325240EA155A86F000C25863 /* 14.bmp */,
+				325240EB155A86F000C25863 /* 15.bmp */,
+				325240EC155A86F000C25863 /* 16.bmp */,
+				325240ED155A86F000C25863 /* 17.bmp */,
+				325240EE155A86F000C25863 /* 18.bmp */,
+				325240EF155A86F000C25863 /* 19.bmp */,
+				325240F0155A86F000C25863 /* 2.bmp */,
+				325240F1155A86F000C25863 /* 20.bmp */,
+				325240F2155A86F000C25863 /* 21.bmp */,
+				325240F3155A86F000C25863 /* 22.bmp */,
+				325240F4155A86F000C25863 /* 23.bmp */,
+				325240F5155A86F000C25863 /* 24.bmp */,
+				325240F6155A86F000C25863 /* 3.bmp */,
+				325240F7155A86F000C25863 /* 4.bmp */,
+				325240F8155A86F000C25863 /* 5.bmp */,
+				325240F9155A86F000C25863 /* 6.bmp */,
+				325240FA155A86F000C25863 /* 7.bmp */,
+				325240FB155A86F000C25863 /* 8.bmp */,
+				325240FC155A86F000C25863 /* 9.bmp */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		329B17EB1559228100A2C7F9 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				32DA59BA154C3E5F00C5C120 /* brain.icns */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +269,30 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */,
+				325240FD155A86F000C25863 /* 1.bmp in Resources */,
+				325240FE155A86F000C25863 /* 10.bmp in Resources */,
+				325240FF155A86F000C25863 /* 11.bmp in Resources */,
+				32524100155A86F000C25863 /* 12.bmp in Resources */,
+				32524101155A86F000C25863 /* 13.bmp in Resources */,
+				32524102155A86F000C25863 /* 14.bmp in Resources */,
+				32524103155A86F000C25863 /* 15.bmp in Resources */,
+				32524104155A86F000C25863 /* 16.bmp in Resources */,
+				32524105155A86F000C25863 /* 17.bmp in Resources */,
+				32524106155A86F000C25863 /* 18.bmp in Resources */,
+				32524107155A86F000C25863 /* 19.bmp in Resources */,
+				32524108155A86F000C25863 /* 2.bmp in Resources */,
+				32524109155A86F000C25863 /* 20.bmp in Resources */,
+				3252410A155A86F000C25863 /* 21.bmp in Resources */,
+				3252410B155A86F000C25863 /* 22.bmp in Resources */,
+				3252410C155A86F000C25863 /* 23.bmp in Resources */,
+				3252410D155A86F000C25863 /* 24.bmp in Resources */,
+				3252410E155A86F000C25863 /* 3.bmp in Resources */,
+				3252410F155A86F000C25863 /* 4.bmp in Resources */,
+				32524110155A86F000C25863 /* 5.bmp in Resources */,
+				32524111155A86F000C25863 /* 6.bmp in Resources */,
+				32524112155A86F000C25863 /* 7.bmp in Resources */,
+				32524113155A86F000C25863 /* 8.bmp in Resources */,
+				32524114155A86F000C25863 /* 9.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				326FAEAA1548134000DE8F77 /* neuronetAppDelegate.m in Sources */,
-				320E8C7D154DD3250032F6CD /* neurons.m in Sources */,
+				326FAEAA1548134000DE8F77 /* NeuronetAppDelegate.m in Sources */,
+				320E8C7D154DD3250032F6CD /* Neurons.m in Sources */,
+				329CC529154EFAB2003B196A /* Perceptron.m in Sources */,
+				32394E401551B1B900DFC8D2 /* ImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

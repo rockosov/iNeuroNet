@@ -13,7 +13,19 @@
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
+	[imageViewer setCurrentImage:nil];
+}
+
+// закрываем приложение на кнопку Close вместе с окном
+-(BOOL) applicationShouldTerminateAfterLastWindowClosed:
+(NSApplication *)sender {
+	return YES;
+}
+
+-(void) selectImage:(id)sender {
+	[imageViewer setCurrentImage: [(NSPopUpButton *)sender title]];
+	
+	return;
 }
 
 @end

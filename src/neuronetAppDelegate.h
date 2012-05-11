@@ -7,11 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ImageView.h"
 
 @interface neuronetAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    NSWindow				*window;
+	IBOutlet ImageView		*imageViewer;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+
+-(IBAction)selectImage: (id)sender;
 
 @end
