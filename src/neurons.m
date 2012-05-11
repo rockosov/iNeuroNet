@@ -1,12 +1,12 @@
 //
-//  neuron.m
+//  Neuron.m
 //  iNeuroNet
 //
 //  Created by rockosov on 29.04.12.
 //  Copyright 2012 TIT_SFEDU. All rights reserved.
 //
 
-#import "neurons.h"
+#import "Neurons.h"
 
 #define WEIGHT_CAPACITY			512
 #define DEFAULT_WEIGHTS_SIZE	16
@@ -15,7 +15,7 @@
 
 +(Neuron *) CreateNeuron : (int)weightsSize 
 						 : (float_t)initWeight
-						 : (float_t)initBegin {
+						 : (float_t)initBias {
 	int		size = 0;
 	Neuron	*newNeuron = nil;
 	int		iter = 0;
@@ -31,7 +31,7 @@
 		[newNeuron->weights addObject:currentNum];
 	}
 	
-	newNeuron->begin = initBegin;
+	newNeuron->bias = initBias;
 	
 	return newNeuron;
 		

@@ -1,5 +1,5 @@
 //
-//  neuron.h
+//  Neuron.h
 //  iNeuroNet
 //
 //  Created by rockosov on 29.04.12.
@@ -15,12 +15,12 @@
 {
 	@protected
 		NSMutableArray	*weights;
-		float_t			begin;
+		float_t			bias;
 }
 
 +(Neuron*)CreateNeuron : (int) weightsSize
 					   : (float_t) initWeight
-					   : (float_t) initBegin;
+					   : (float_t) initBias;
 
 -(float_t)main_function : (float_t) value;
 
