@@ -2,7 +2,7 @@
 {
 	089C165DFE840E0CC02AAC07 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 476}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 395}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 45}";
 		};
@@ -14,6 +14,8 @@
 		activeTarget = 8D1107260486CEB800E47090 /* iNeuroNet */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* iNeuroNet */,
+		);
+		breakpoints = (
 		);
 		codeSenseManager = 32907FB615481263003D2D20 /* Code sense */;
 		executables = (
@@ -72,39 +74,96 @@
 					PBXSymbolsDataSource_ReferenceNameID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 358418888;
-			PBXWorkspaceStateSaveDate = 358418888;
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					916,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					900,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 358856636;
+			PBXWorkspaceStateSaveDate = 358856636;
 		};
 		perUserProjectItems = {
-			320E8CB6154DF4320032F6CD = 320E8CB6154DF4320032F6CD /* PBXTextBookmark */;
+			320CD32B1562F0A500B162D7 = 320CD32B1562F0A500B162D7 /* PlistBookmark */;
+			320CD32C1562F0A500B162D7 = 320CD32C1562F0A500B162D7 /* PBXTextBookmark */;
+			320CD3DA1562F88900B162D7 = 320CD3DA1562F88900B162D7 /* PBXTextBookmark */;
+			320CD3DC1562F88900B162D7 = 320CD3DC1562F88900B162D7 /* PBXTextBookmark */;
+			320CD3DD1562F88900B162D7 = 320CD3DD1562F88900B162D7 /* PBXTextBookmark */;
 			320E8CB8154DF4320032F6CD = 320E8CB8154DF4320032F6CD /* PBXTextBookmark */;
 			3227766215495B2300397325 = 3227766215495B2300397325 /* PBXTextBookmark */;
-			3232BF6C155953D100DDA145 = 3232BF6C155953D100DDA145 /* PBXTextBookmark */;
 			3240C61C1558350E0034AC0C = 3240C61C1558350E0034AC0C /* PBXTextBookmark */;
 			3240C6FE155843D00034AC0C = 3240C6FE155843D00034AC0C /* PBXTextBookmark */;
-			325241DB155A9B5900C25863 = 325241DB155A9B5900C25863 /* PBXTextBookmark */;
-			325241DD155A9B5900C25863 = 325241DD155A9B5900C25863 /* PBXTextBookmark */;
 			326698971548B4BF005AD420 = 326698971548B4BF005AD420 /* PBXTextBookmark */;
 			326698991548B4BF005AD420 = 326698991548B4BF005AD420 /* PBXTextBookmark */;
 			3266989B1548B4BF005AD420 = 3266989B1548B4BF005AD420 /* PBXTextBookmark */;
 			3266989D1548B4BF005AD420 = 3266989D1548B4BF005AD420 /* PBXTextBookmark */;
-			327AD8E6155BA9770039475C = 327AD8E6155BA9770039475C /* PBXTextBookmark */;
 			327CCC51154823B0008DDE67 = 327CCC51154823B0008DDE67 /* PBXTextBookmark */;
-			329B16861559014500A2C7F9 = 329B16861559014500A2C7F9 /* PBXTextBookmark */;
 			329B16A71559022700A2C7F9 = 329B16A71559022700A2C7F9 /* PBXTextBookmark */;
-			329B16C11559038200A2C7F9 = 329B16C11559038200A2C7F9 /* PBXTextBookmark */;
 			329B16CC155906C500A2C7F9 = 329B16CC155906C500A2C7F9 /* PBXTextBookmark */;
-			329B17E0155920CE00A2C7F9 = 329B17E0155920CE00A2C7F9 /* PBXTextBookmark */;
-			329B17E1155920CE00A2C7F9 = 329B17E1155920CE00A2C7F9 /* PBXTextBookmark */;
-			329B1822155922BF00A2C7F9 = 329B1822155922BF00A2C7F9 /* PBXTextBookmark */;
 			329B1823155922BF00A2C7F9 = 329B1823155922BF00A2C7F9 /* PBXBookmark */;
-			329B18341559281C00A2C7F9 = 329B18341559281C00A2C7F9 /* PlistBookmark */;
-			329B188A15593E6600A2C7F9 = 329B188A15593E6600A2C7F9 /* PBXTextBookmark */;
 			329B188C15593E6600A2C7F9 = 329B188C15593E6600A2C7F9 /* PBXTextBookmark */;
 			329B188E15593E6600A2C7F9 = 329B188E15593E6600A2C7F9 /* PBXTextBookmark */;
 			329B189015593E6600A2C7F9 = 329B189015593E6600A2C7F9 /* PBXTextBookmark */;
-			329B189215593E6600A2C7F9 = 329B189215593E6600A2C7F9 /* PBXTextBookmark */;
-			32B1B451155D09CC001555D2 /* PBXTextBookmark */ = 32B1B451155D09CC001555D2 /* PBXTextBookmark */;
+			32A256C81562AB2E00179285 = 32A256C81562AB2E00179285 /* PBXTextBookmark */;
+			32A2586F1562BA1F00179285 = 32A2586F1562BA1F00179285 /* PBXTextBookmark */;
+			32A258701562BA1F00179285 = 32A258701562BA1F00179285 /* PBXTextBookmark */;
+			32A258C71562BB7500179285 = 32A258C71562BB7500179285 /* PBXTextBookmark */;
+			32B1B6D7155D6750001555D2 = 32B1B6D7155D6750001555D2 /* PBXTextBookmark */;
+			32B1B6D9155D6750001555D2 = 32B1B6D9155D6750001555D2 /* PBXTextBookmark */;
+			32B1B6DB155D6750001555D2 = 32B1B6DB155D6750001555D2 /* PBXTextBookmark */;
+			32B1B6DD155D6750001555D2 = 32B1B6DD155D6750001555D2 /* PBXTextBookmark */;
+			32CB45B61563B7C0002DF018 /* PBXTextBookmark */ = 32CB45B61563B7C0002DF018 /* PBXTextBookmark */;
+			32CB45B91563B7C0002DF018 /* PBXTextBookmark */ = 32CB45B91563B7C0002DF018 /* PBXTextBookmark */;
+			32CB45BA1563B7C0002DF018 /* PBXTextBookmark */ = 32CB45BA1563B7C0002DF018 /* PBXTextBookmark */;
+			32D0D378155E8084003AEC03 = 32D0D378155E8084003AEC03 /* PBXTextBookmark */;
+			32D0D3BF155E84BC003AEC03 = 32D0D3BF155E84BC003AEC03 /* PBXTextBookmark */;
+			32D0D4AB155E8D9F003AEC03 = 32D0D4AB155E8D9F003AEC03 /* PBXTextBookmark */;
+			32D0D54B155E9165003AEC03 = 32D0D54B155E9165003AEC03 /* PBXTextBookmark */;
+			32D0D5AE155E9F22003AEC03 = 32D0D5AE155E9F22003AEC03 /* PBXTextBookmark */;
+			32D0D652155EA2C6003AEC03 = 32D0D652155EA2C6003AEC03 /* PBXTextBookmark */;
+			32E3DD451562EDA500AA20B7 = 32E3DD451562EDA500AA20B7 /* PBXTextBookmark */;
+			32E3DD481562EDA500AA20B7 = 32E3DD481562EDA500AA20B7 /* PBXTextBookmark */;
+			32E3DD491562EDA500AA20B7 = 32E3DD491562EDA500AA20B7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 32907FB515481263003D2D20 /* Source Control */;
 		userBuildSettings = {
@@ -117,31 +176,92 @@
 			sepNavVisRange = "{0, 242}";
 		};
 	};
+	320CD32B1562F0A500B162D7 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleDevelopmentRegion,
+		);
+		name = "/Users/rockosov/Study/6_semestr/courseNeuroNet/iNeuroNet/iNeuroNet-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	320CD32C1562F0A500B162D7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320CD32D1562F0A500B162D7 /* CPTAxisLabelGroup.h */;
+		name = "CPTAxisLabelGroup.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 106;
+		vrLoc = 0;
+	};
+	320CD32D1562F0A500B162D7 /* CPTAxisLabelGroup.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CPTAxisLabelGroup.h;
+		path = /Users/rockosov/Study/6_semestr/courseNeuroNet/iNeuroNet/vendor/CorePlot.framework/PrivateHeaders/CPTAxisLabelGroup.h;
+		sourceTree = "<absolute>";
+	};
+	320CD3DA1562F88900B162D7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320CD3DB1562F88900B162D7 /* CPTAxisLabelGroup.h */;
+		name = "CPTAxisLabelGroup.h: 4";
+		rLen = 0;
+		rLoc = 97;
+		rType = 0;
+		vrLen = 106;
+		vrLoc = 0;
+	};
+	320CD3DB1562F88900B162D7 /* CPTAxisLabelGroup.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CPTAxisLabelGroup.h;
+		path = /Users/rockosov/Study/6_semestr/courseNeuroNet/iNeuroNet/vendor/CorePlot.framework/PrivateHeaders/CPTAxisLabelGroup.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 376}}";
+			sepNavSelRange = "{97, 0}";
+			sepNavVisRange = "{0, 106}";
+		};
+	};
+	320CD3DC1562F88900B162D7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */;
+		name = "NeuronetAppDelegate.m: 31";
+		rLen = 0;
+		rLoc = 738;
+		rType = 0;
+		vrLen = 1365;
+		vrLoc = 0;
+	};
+	320CD3DD1562F88900B162D7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */;
+		name = "NeuronetAppDelegate.h: 36";
+		rLen = 0;
+		rLoc = 805;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 0;
+	};
 	320E8C7B154DD3250032F6CD /* Neurons.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 476}}";
-			sepNavSelRange = "{46, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 468}}";
+			sepNavSelRange = "{216, 0}";
 			sepNavVisRange = "{0, 508}";
 			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
 		};
 	};
 	320E8C7C154DD3250032F6CD /* Neurons.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 754}}";
-			sepNavSelRange = "{135, 0}";
-			sepNavVisRange = "{0, 792}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 741}}";
+			sepNavSelRange = "{720, 0}";
+			sepNavVisRange = "{233, 676}";
 			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
 		};
-	};
-	320E8CB6154DF4320032F6CD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 320E8CB7154DF4320032F6CD /* Foundation.h */;
-		name = "Foundation.h: 9";
-		rLen = 0;
-		rLoc = 160;
-		rType = 0;
-		vrLen = 1261;
-		vrLoc = 0;
 	};
 	320E8CB7154DF4320032F6CD /* Foundation.h */ = {
 		isa = PBXFileReference;
@@ -184,28 +304,20 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSCell.h;
 		sourceTree = "<absolute>";
 	};
-	3232BF6C155953D100DDA145 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */;
-		name = "NeuronetAppDelegate.m: 6";
-		rLen = 0;
-		rLoc = 115;
-		rType = 0;
-		vrLen = 610;
-		vrLoc = 0;
-	};
 	32394E3E1551B1B900DFC8D2 /* ImageView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 476}}";
-			sepNavSelRange = "{246, 0}";
-			sepNavVisRange = "{0, 254}";
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 745}}";
+			sepNavSelRange = "{277, 0}";
+			sepNavVisRange = "{0, 283}";
+			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
 		};
 	};
 	32394E3F1551B1B900DFC8D2 /* ImageView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1950}}";
-			sepNavSelRange = "{1179, 0}";
-			sepNavVisRange = "{791, 770}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{212, 1259}\";\n            s = 0;\n        },\n                {\n            r = \"{1535, 719}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 2680}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 481}}";
+			sepNavSelRange = "{135, 0}";
+			sepNavVisRange = "{0, 638}";
 			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
 		};
 	};
@@ -242,26 +354,6 @@
 		name = NSImage.h;
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSImage.h;
 		sourceTree = "<absolute>";
-	};
-	325241DB155A9B5900C25863 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 329CC528154EFAB2003B196A /* Perceptron.m */;
-		name = "Perceptron.m: 9";
-		rLen = 0;
-		rLoc = 151;
-		rType = 0;
-		vrLen = 187;
-		vrLoc = 0;
-	};
-	325241DD155A9B5900C25863 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 32394E3F1551B1B900DFC8D2 /* ImageView.m */;
-		name = "ImageView.m: 60";
-		rLen = 0;
-		rLoc = 2302;
-		rType = 0;
-		vrLen = 907;
-		vrLoc = 554;
 	};
 	326698971548B4BF005AD420 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -326,29 +418,19 @@
 	};
 	326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 476}}";
-			sepNavSelRange = "{384, 0}";
-			sepNavVisRange = "{0, 404}";
-			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 746}}";
+			sepNavSelRange = "{805, 0}";
+			sepNavVisRange = "{0, 848}";
+			sepNavWindowFrame = "{{15, 4}, {1226, 874}}";
 		};
 	};
 	326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1357, 745}}";
-			sepNavSelRange = "{604, 0}";
-			sepNavVisRange = "{0, 610}";
-			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 806}}";
+			sepNavSelRange = "{738, 0}";
+			sepNavVisRange = "{0, 1365}";
+			sepNavWindowFrame = "{{75, 4}, {1226, 874}}";
 		};
-	};
-	327AD8E6155BA9770039475C /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 32394E3F1551B1B900DFC8D2 /* ImageView.m */;
-		name = "ImageView.m: 43";
-		rLen = 0;
-		rLoc = 1179;
-		rType = 0;
-		vrLen = 796;
-		vrLoc = 791;
 	};
 	327CCC4B1548235B008DDE67 /* objc.h */ = {
 		isa = PBXFileReference;
@@ -403,6 +485,9 @@
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+			_moreRepFlags = 1;
+		};
 	};
 	32907FB515481263003D2D20 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -418,21 +503,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	329B16861559014500A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Expected specifier-qualifier-list before 'ImageView'";
-		fRef = 329B16871559014500A2C7F9 /* neuronetAppDelegate.h */;
-		rLen = 1;
-		rLoc = 12;
-		rType = 1;
-	};
-	329B16871559014500A2C7F9 /* neuronetAppDelegate.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = neuronetAppDelegate.h;
-		path = "/Users/rockosov/Study/6 semestr/courseNeuroNet/iNeuroNet/src/neuronetAppDelegate.h";
-		sourceTree = "<absolute>";
-	};
 	329B16A71559022700A2C7F9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
@@ -441,16 +511,6 @@
 		rLoc = 242;
 		rType = 0;
 		vrLen = 242;
-		vrLoc = 0;
-	};
-	329B16C11559038200A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 329CC527154EFAB2003B196A /* Perceptron.h */;
-		name = "Perceptron.h: 2";
-		rLen = 0;
-		rLoc = 8;
-		rType = 0;
-		vrLen = 200;
 		vrLoc = 0;
 	};
 	329B16CC155906C500A2C7F9 /* PBXTextBookmark */ = {
@@ -470,61 +530,9 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSBitmapImageRep.h;
 		sourceTree = "<absolute>";
 	};
-	329B17E0155920CE00A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 320E8C7C154DD3250032F6CD /* Neurons.m */;
-		name = "Neurons.m: 9";
-		rLen = 0;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 792;
-		vrLoc = 0;
-	};
-	329B17E1155920CE00A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 320E8C7B154DD3250032F6CD /* Neurons.h */;
-		name = "Neurons.h: 5";
-		rLen = 0;
-		rLoc = 46;
-		rType = 0;
-		vrLen = 508;
-		vrLoc = 0;
-	};
-	329B1822155922BF00A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 089C165DFE840E0CC02AAC07 /* English */;
-		name = "InfoPlist.strings: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 45;
-		vrLoc = 0;
-	};
 	329B1823155922BF00A2C7F9 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 32DA59BA154C3E5F00C5C120 /* brain.icns */;
-	};
-	329B18341559281C00A2C7F9 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleIdentifier,
-		);
-		name = "/Users/rockosov/Study/6 semestr/courseNeuroNet/iNeuroNet/iNeuroNet-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	329B188A15593E6600A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 32394E3E1551B1B900DFC8D2 /* ImageView.h */;
-		name = "ImageView.h: 14";
-		rLen = 0;
-		rLoc = 246;
-		rType = 0;
-		vrLen = 254;
-		vrLoc = 0;
 	};
 	329B188C15593E6600A2C7F9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -577,19 +585,9 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSPopUpButton.h;
 		sourceTree = "<absolute>";
 	};
-	329B189215593E6600A2C7F9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */;
-		name = "NeuronetAppDelegate.h: 19";
-		rLen = 0;
-		rLoc = 384;
-		rType = 0;
-		vrLen = 404;
-		vrLoc = 0;
-	};
 	329CC527154EFAB2003B196A /* Perceptron.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 476}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 2561}}";
 			sepNavSelRange = "{8, 0}";
 			sepNavVisRange = "{0, 200}";
 			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
@@ -597,20 +595,249 @@
 	};
 	329CC528154EFAB2003B196A /* Perceptron.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 462}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 949}}";
 			sepNavSelRange = "{151, 0}";
 			sepNavVisRange = "{0, 187}";
 		};
 	};
-	32B1B451155D09CC001555D2 /* PBXTextBookmark */ = {
+	32A256C81562AB2E00179285 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 32394E3F1551B1B900DFC8D2 /* ImageView.m */;
-		name = "ImageView.m: 43";
+		name = "ImageView.m: 8";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 135;
 		rType = 0;
-		vrLen = 770;
-		vrLoc = 791;
+		vrLen = 2614;
+		vrLoc = 0;
+	};
+	32A2586F1562BA1F00179285 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32B1B617155D5B60001555D2 /* rgb.h */;
+		name = "rgb.h: 25";
+		rLen = 1;
+		rLoc = 520;
+		rType = 0;
+		vrLen = 689;
+		vrLoc = 125;
+	};
+	32A258701562BA1F00179285 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */;
+		name = "NeuronetAppDelegate.m: 10";
+		rLen = 0;
+		rLoc = 200;
+		rType = 0;
+		vrLen = 776;
+		vrLoc = 42;
+	};
+	32A258C71562BB7500179285 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */;
+		name = "NeuronetAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 760;
+		vrLoc = 82;
+	};
+	32B1B612155D59B7001555D2 /* BmpView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 745}}";
+			sepNavSelRange = "{408, 0}";
+			sepNavVisRange = "{0, 505}";
+			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
+		};
+	};
+	32B1B613155D59B7001555D2 /* BmpView.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{190, 1138}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 3972}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 1846}}";
+			sepNavSelRange = "{1640, 0}";
+			sepNavVisRange = "{808, 1267}";
+			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
+		};
+	};
+	32B1B617155D5B60001555D2 /* rgb.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 520}}";
+			sepNavSelRange = "{520, 1}";
+			sepNavVisRange = "{125, 689}";
+			sepNavWindowFrame = "{{15, 4}, {1416, 873}}";
+		};
+	};
+	32B1B6D7155D6750001555D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320E8C7B154DD3250032F6CD /* Neurons.h */;
+		name = "Neurons.h: 16";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
+	32B1B6D9155D6750001555D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32B1B6DA155D6750001555D2 /* NSObjCRuntime.h */;
+		name = "NSObjCRuntime.h: 168";
+		rLen = 34;
+		rLoc = 5945;
+		rType = 0;
+		vrLen = 1027;
+		vrLoc = 223;
+	};
+	32B1B6DA155D6750001555D2 /* NSObjCRuntime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSObjCRuntime.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSObjCRuntime.h;
+		sourceTree = "<absolute>";
+	};
+	32B1B6DB155D6750001555D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32B1B6DC155D6750001555D2 /* Cocoa.h */;
+		name = "Cocoa.h: 12";
+		rLen = 23;
+		rLoc = 404;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 0;
+	};
+	32B1B6DC155D6750001555D2 /* Cocoa.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Cocoa.h;
+		path = /System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h;
+		sourceTree = "<absolute>";
+	};
+	32B1B6DD155D6750001555D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320E8CB7154DF4320032F6CD /* Foundation.h */;
+		name = "Foundation.h: 9";
+		rLen = 0;
+		rLoc = 160;
+		rType = 0;
+		vrLen = 1087;
+		vrLoc = 1739;
+	};
+	32CB45B61563B7C0002DF018 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320CD3DB1562F88900B162D7 /* CPTAxisLabelGroup.h */;
+		name = "CPTAxisLabelGroup.h: 4";
+		rLen = 0;
+		rLoc = 97;
+		rType = 0;
+		vrLen = 106;
+		vrLoc = 0;
+	};
+	32CB45B91563B7C0002DF018 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */;
+		name = "NeuronetAppDelegate.m: 31";
+		rLen = 0;
+		rLoc = 738;
+		rType = 0;
+		vrLen = 1365;
+		vrLoc = 0;
+	};
+	32CB45BA1563B7C0002DF018 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */;
+		name = "NeuronetAppDelegate.h: 36";
+		rLen = 0;
+		rLoc = 805;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 0;
+	};
+	32D0D378155E8084003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 320E8C7C154DD3250032F6CD /* Neurons.m */;
+		name = "Neurons.m: 34";
+		rLen = 0;
+		rLoc = 720;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 233;
+	};
+	32D0D3BF155E84BC003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 329CC528154EFAB2003B196A /* Perceptron.m */;
+		name = "Perceptron.m: 9";
+		rLen = 0;
+		rLoc = 151;
+		rType = 0;
+		vrLen = 187;
+		vrLoc = 0;
+	};
+	32D0D4AB155E8D9F003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 329CC527154EFAB2003B196A /* Perceptron.h */;
+		name = "Perceptron.h: 2";
+		rLen = 0;
+		rLoc = 8;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	32D0D54B155E9165003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32394E3E1551B1B900DFC8D2 /* ImageView.h */;
+		name = "ImageView.h: 9";
+		rLen = 0;
+		rLoc = 138;
+		rType = 0;
+		vrLen = 283;
+		vrLoc = 0;
+	};
+	32D0D5AE155E9F22003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32B1B612155D59B7001555D2 /* BmpView.h */;
+		name = "BmpView.h: 23";
+		rLen = 0;
+		rLoc = 498;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 0;
+	};
+	32D0D652155EA2C6003AEC03 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32B1B613155D59B7001555D2 /* BmpView.m */;
+		name = "BmpView.m: 100";
+		rLen = 0;
+		rLoc = 2321;
+		rType = 0;
+		vrLen = 1891;
+		vrLoc = 3;
+	};
+	32E3DD451562EDA500AA20B7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	32E3DD481562EDA500AA20B7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */;
+		name = "NeuronetAppDelegate.m: 31";
+		rLen = 0;
+		rLoc = 738;
+		rType = 0;
+		vrLen = 1365;
+		vrLoc = 0;
+	};
+	32E3DD491562EDA500AA20B7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */;
+		name = "NeuronetAppDelegate.h: 36";
+		rLen = 0;
+		rLoc = 805;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 0;
 	};
 	8D1107260486CEB800E47090 /* iNeuroNet */ = {
 		activeExec = 0;

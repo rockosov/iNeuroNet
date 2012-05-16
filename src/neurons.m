@@ -13,27 +13,26 @@
 
 @implementation Neuron
 
-+(Neuron *) CreateNeuron : (int)weightsSize 
+-(Neuron *) CreateNeuron : (int)weightsSize 
 						 : (float_t)initWeight
 						 : (float_t)initBias {
 	int		size = 0;
-	Neuron	*newNeuron = nil;
 	int		iter = 0;
 		
 	size = (weightsSize > 0) ? weightsSize : DEFAULT_WEIGHTS_SIZE;
-	newNeuron = [Neuron new];
-	
-	newNeuron->weights = [NSMutableArray arrayWithCapacity:WEIGHT_CAPACITY];
-	
-	for (iter = 0; iter < size; ++iter) {
-		NSNumber	*currentNum = nil;
-		currentNum = [NSNumber numberWithFloat:initWeight];
-		[newNeuron->weights addObject:currentNum];
+	if (self = [super init]) {
+		weights = [NSMutableArray arrayWithCapacity:WEIGHT_CAPACITY];
+		
+		for (iter = 0; iter < size; ++iter) {
+			NSNumber	*currentNum = nil;
+			currentNum = [NSNumber numberWithFloat:initWeight];
+			[weights addObject:currentNum];
+		}
+		
+		bias = initBias;
 	}
-	
-	newNeuron->bias = initBias;
-	
-	return newNeuron;
+
+	return self;
 		
 }
 

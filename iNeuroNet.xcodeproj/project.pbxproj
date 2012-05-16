@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		1DDD58160DA1D0A300B32029 /* iNeuroNet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* iNeuroNet.xib */; };
+		320CD36B1562F59300B162D7 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CD2271562EEA900B162D7 /* CorePlot.framework */; };
+		320CD3831562F68400B162D7 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 320CD2271562EEA900B162D7 /* CorePlot.framework */; };
 		320E8C7D154DD3250032F6CD /* Neurons.m in Sources */ = {isa = PBXBuildFile; fileRef = 320E8C7C154DD3250032F6CD /* Neurons.m */; };
 		32394E401551B1B900DFC8D2 /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32394E3F1551B1B900DFC8D2 /* ImageView.m */; };
 		325240FD155A86F000C25863 /* 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240E5155A86F000C25863 /* 1.bmp */; };
@@ -36,20 +38,36 @@
 		32524114155A86F000C25863 /* 9.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FC155A86F000C25863 /* 9.bmp */; };
 		326FAEAA1548134000DE8F77 /* NeuronetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */; };
 		329CC529154EFAB2003B196A /* Perceptron.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CC528154EFAB2003B196A /* Perceptron.m */; };
+		32B1B614155D59B7001555D2 /* BmpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1B613155D59B7001555D2 /* BmpView.m */; };
 		32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32DA59BA154C3E5F00C5C120 /* brain.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		320CD3821562F66A00B162D7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				320CD3831562F68400B162D7 /* CorePlot.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/iNeuroNet.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		320CD2271562EEA900B162D7 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = vendor/CorePlot.framework; sourceTree = "<group>"; };
+		320CD2B01562EFC200B162D7 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		320E8C7B154DD3250032F6CD /* Neurons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Neurons.h; path = src/Neurons.h; sourceTree = "<group>"; };
 		320E8C7C154DD3250032F6CD /* Neurons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Neurons.m; path = src/Neurons.m; sourceTree = "<group>"; };
 		32394E3E1551B1B900DFC8D2 /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageView.h; path = src/ImageView.h; sourceTree = "<group>"; };
@@ -82,6 +100,9 @@
 		326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeuronetAppDelegate.m; path = src/NeuronetAppDelegate.m; sourceTree = "<group>"; };
 		329CC527154EFAB2003B196A /* Perceptron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Perceptron.h; path = src/Perceptron.h; sourceTree = "<group>"; };
 		329CC528154EFAB2003B196A /* Perceptron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Perceptron.m; path = src/Perceptron.m; sourceTree = "<group>"; };
+		32B1B612155D59B7001555D2 /* BmpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BmpView.h; path = src/BmpView.h; sourceTree = "<group>"; };
+		32B1B613155D59B7001555D2 /* BmpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BmpView.m; path = src/BmpView.m; sourceTree = "<group>"; };
+		32B1B617155D5B60001555D2 /* rgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rgb.h; path = src/rgb.h; sourceTree = "<group>"; };
 		32DA59BA154C3E5F00C5C120 /* brain.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = brain.icns; path = icons/brain.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iNeuroNet-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iNeuroNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNeuroNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320CD36B1562F59300B162D7 /* CorePlot.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +124,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				32B1B612155D59B7001555D2 /* BmpView.h */,
+				32B1B613155D59B7001555D2 /* BmpView.m */,
 				329CC527154EFAB2003B196A /* Perceptron.h */,
 				32394E3E1551B1B900DFC8D2 /* ImageView.h */,
 				32394E3F1551B1B900DFC8D2 /* ImageView.m */,
@@ -110,6 +134,7 @@
 				320E8C7C154DD3250032F6CD /* Neurons.m */,
 				326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */,
 				326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */,
+				32B1B617155D5B60001555D2 /* rgb.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -118,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				320CD2271562EEA900B162D7 /* CorePlot.framework */,
+				320CD2B01562EFC200B162D7 /* Quartz.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -167,7 +194,7 @@
 				329B17EB1559228100A2C7F9 /* icons */,
 				8D1107310486CEB800E47090 /* iNeuroNet-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				1DDD58140DA1D0A300B32029 /* iNeuroNet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -230,6 +257,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				320CD3821562F66A00B162D7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -267,7 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				1DDD58160DA1D0A300B32029 /* iNeuroNet.xib in Resources */,
 				32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */,
 				325240FD155A86F000C25863 /* 1.bmp in Resources */,
 				325240FE155A86F000C25863 /* 10.bmp in Resources */,
@@ -308,6 +336,7 @@
 				320E8C7D154DD3250032F6CD /* Neurons.m in Sources */,
 				329CC529154EFAB2003B196A /* Perceptron.m in Sources */,
 				32394E401551B1B900DFC8D2 /* ImageView.m in Sources */,
+				32B1B614155D59B7001555D2 /* BmpView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,12 +351,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+		1DDD58140DA1D0A300B32029 /* iNeuroNet.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
 			);
-			name = MainMenu.xib;
+			name = iNeuroNet.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,8 +365,12 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -346,21 +379,30 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "iNeuroNet-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = iNeuroNet;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "iNeuroNet-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = iNeuroNet;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -368,10 +410,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
@@ -382,9 +426,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;

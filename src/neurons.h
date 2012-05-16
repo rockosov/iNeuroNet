@@ -18,7 +18,7 @@
 		float_t			bias;
 }
 
-+(Neuron*)CreateNeuron : (int) weightsSize
+-(Neuron*)CreateNeuron : (int) weightsSize
 					   : (float_t) initWeight
 					   : (float_t) initBias;
 
