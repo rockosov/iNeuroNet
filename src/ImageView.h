@@ -8,9 +8,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ImageView : NSView {
-	NSString	*currentImage;
+	NSMutableArray	*pixels;
 }
 
--(void)setCurrentImage: (NSString*) targetImage;
+-(void) setPixels: (NSMutableArray*) targetPixels;
+-(NSMutableArray*) pixels;
 
 @end

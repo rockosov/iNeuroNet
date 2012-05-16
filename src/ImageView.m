@@ -6,60 +6,98 @@
 //
 
 #import "ImageView.h"
+#import "rgb.h"
 
-#define RGB_NUM_CHLS				3
-
-NSUInteger g_blackColor[RGB_NUM_CHLS] = {0x00, 0x00, 0x00};
-
-#define PIXEL_IS_BLACK(pixel)		\
-			memcmp(pixel, g_blackColor, RGB_NUM_CHLS * sizeof(NSUInteger)) == 0
-NSUInteger g_whiteColor[RGB_NUM_CHLS] = {0xff, 0xff, 0xff};
-#define PIXEL_IS_WHITE(pixel)		\
-			memcmp(pixel, g_whiteColor, RGB_NUM_CHLS * sizeof(NSUInteger)) == 0
-
-
-void PrintPixels (NSImage *targetImage) {
-	NSBitmapImageRep	*bitmapImageRep = [[NSBitmapImageRep alloc]
-										initWithData:
-										   [targetImage TIFFRepresentation]];
-
-	NSUInteger			*rgba = malloc(sizeof(NSInteger) * 4);
+static void DrawGrid (ImageView *owner, NSUInteger scale) {
+	NSRect				ownerRect;
+	NSBezierPath		*verticalLinePath = nil;
+	NSBezierPath		*horizontalLinePath = nil;
 	
-	NSInteger			x, y;
-
-	memset (rgba, 0, sizeof(NSInteger) * 4);
+	int					gridWidth = 0;
+	int					gridHeight = 0;
+	int					xyIterator = 0;
 	
-	assert (targetImage != nil);
-	
-	NSLog(@"pixels width = %i, height = %i", [bitmapImageRep pixelsWide], 
-		  [bitmapImageRep pixelsHigh]);
-	
-	for (y = 0; y < [bitmapImageRep pixelsHigh]; ++y) {
-		for (x = 0; x < [bitmapImageRep pixelsWide]; ++x) {
-			[bitmapImageRep getPixel:rgba
-								 atX:x
-								   y:y];
-			if ( PIXEL_IS_BLACK(rgba)) {
-				NSLog(@"at x = %i, y = %i black pixel = %x%x%x",
-					  x, y, rgba[0], rgba[1], rgba[2]);
-			}
-			else {
-				if (PIXEL_IS_WHITE(rgba)) {
-					NSLog(@"at x = %i, y = %i white pixel = %x%x%x", x, y,
-						  rgba[0], rgba[1], rgba[2]);
-				}
-				else {
-					NSLog(@"FAIL! at x = %i, y = %i pixel = %x%x%x", x, y,
-						  rgba[0], rgba[1], rgba[2]);
-				}
+	NSPoint				startPoint = { 0, 0 };
+	NSPoint				endPoint = { 0, 0 };
 
-			}
-
-		}
+	
+	if (scale < MIN_SCALE_FOR_GRID) {
+		return;
 	}
 	
-	[bitmapImageRep release];
-	free(rgba);
+	ownerRect = [owner bounds];
+	[[NSColor grayColor] set];
+	verticalLinePath = [NSBezierPath bezierPath];
+	
+	gridWidth = ownerRect.size.width;
+	gridHeight = ownerRect.size.height;
+	
+	while (xyIterator <= gridWidth) {
+		startPoint.x = xyIterator;
+		startPoint.y = 0;
+		
+		endPoint.x = xyIterator;
+		endPoint.y = gridHeight;
+				
+		[verticalLinePath setLineWidth:0.1];
+		[verticalLinePath moveToPoint:startPoint];
+		[verticalLinePath lineToPoint:endPoint];
+		[verticalLinePath stroke];
+		
+		xyIterator = xyIterator + scale;
+	}
+		
+	horizontalLinePath = [NSBezierPath bezierPath];		
+
+	xyIterator = 0;
+	while (xyIterator <= gridHeight) {
+		startPoint.x = 0;
+		startPoint.y = xyIterator;
+		
+		endPoint.x = gridWidth;
+		endPoint.y = xyIterator;
+		
+		[horizontalLinePath setLineWidth:0.1];
+		[horizontalLinePath moveToPoint:startPoint];
+		[horizontalLinePath lineToPoint:endPoint];
+		[horizontalLinePath stroke];
+		
+		xyIterator = xyIterator + scale;
+	}
+	
+	return;
+}
+
+static void DrawPixels (ImageView *owner, NSUInteger scale) {
+	NSInteger		x = 0, y = 0;
+	
+	NSUInteger		index = 0;
+	
+	NSRect			currentRect = NSMakeRect(x, y, scale, scale);
+	
+	NSUInteger		currentPixelBin = 0;
+	
+	NSLog(@"pixels = %p", [owner pixels]);
+
+	for ( y = [owner bounds].size.height - scale; y >= 0; y -= scale ) {
+		for ( x = 0; x < [owner bounds].size.width; x += scale ) {
+			currentRect.origin.x = x;
+			currentRect.origin.y = y;
+			
+			currentPixelBin = [(NSNumber*)[[owner pixels] objectAtIndex:index]
+							   unsignedIntegerValue];
+						
+			if (currentPixelBin == BLACK_PIXEL_BIN) {
+				[[NSColor blackColor] set];
+			}
+			if (currentPixelBin == WHITE_PIXEL_BIN) {
+				[[NSColor whiteColor] set];
+			}
+			
+			NSRectFill(currentRect);
+			index++;
+		}
+	}
 	
 	return;
 }
@@ -67,82 +105,27 @@ void PrintPixels (NSImage *targetImage) {
 @implementation ImageView
 
 - (void) drawRect:(NSRect)aRect {
-	if (currentImage == nil) {
-
-		// аттрибуты строки
-		//======================================================================
-		NSFont				*font = [NSFont fontWithName:@"Verdana-BoldItalic" 
-													size:20.0];
-		
-		NSMutableParagraphStyle *mutParaStyle = [[NSMutableParagraphStyle alloc]
-												 init];
-		
-		NSArray				*objects = [NSArray arrayWithObjects:font, 
-										[NSColor blackColor],
-										mutParaStyle,
-										nil];
-		
-		NSArray				*keys = [NSArray arrayWithObjects:
-									 NSFontAttributeName, 
-									 NSForegroundColorAttributeName,
-									 NSParagraphStyleAttributeName,
-									 nil];
-		
-		[mutParaStyle setAlignment:NSCenterTextAlignment];
-		
-		NSDictionary		*attributes = [NSDictionary dictionaryWithObjects:
-										   objects 
-																forKeys:
-										   keys];
-		
-		NSAttributedString	*banner = 
-		[[NSAttributedString alloc] initWithString:@"\n\n\nImage not selected"
-										attributes:attributes];
-		//======================================================================
-
-		[[NSColor whiteColor] set];
-
-		NSRectFill([self bounds]);
-		
-		[banner drawInRect:[self bounds]];
-		
-		[banner release];
-		[mutParaStyle release];
-	}
-	else {
-		NSImage		*image = nil;
-		
-		NSString	*targetImagePath = nil;
-		
-		targetImagePath = [[NSBundle mainBundle] pathForResource:currentImage
-														  ofType:@"bmp"];
-
-		image = [[NSImage alloc]
-				 initWithContentsOfFile:targetImagePath];
-		
-		PrintPixels(image);
-		
-		[image  drawInRect:[self bounds] 
-				  fromRect:[image alignmentRect]
-				 operation:NSCompositeSourceOver
-				  fraction:1.0];
-		
-		NSLog(@"H = %f, W = %f", [image size].height, [image size].width);
-		
-		[image release];
-	}
+	[[NSColor whiteColor] set];
+	NSRectFill([self bounds]);
 	
+	if (pixels != nil && [pixels count] != 0) {
+		NSLog(@"DrawPixels!");
+		DrawPixels(self, PIXEL_SCALE_SIZE);
+	}
+	DrawGrid(self, PIXEL_SCALE_SIZE);
 	
 	return;
 }
 
--(void) setCurrentImage:(NSString *)targetImage {
+-(void) setPixels:(NSMutableArray *)targetPixels {
 	
-	currentImage = targetImage;
-	
-	[self setNeedsDisplay:YES];
+	pixels = targetPixels;
 	
 	return;
+}
+
+-(NSMutableArray *) pixels {
+	return pixels;
 }
 
 @end
