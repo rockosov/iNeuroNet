@@ -13,7 +13,7 @@
 
 @implementation Neuron
 
--(Neuron *) CreateNeuron : (int)weightsSize 
+-(Neuron *) InitNeuron : (int)weightsSize 
 						 : (float_t)initWeight
 						 : (float_t)initBias {
 	int		size = 0;
@@ -21,7 +21,7 @@
 		
 	size = (weightsSize > 0) ? weightsSize : DEFAULT_WEIGHTS_SIZE;
 	if (self = [super init]) {
-		weights = [NSMutableArray arrayWithCapacity:WEIGHT_CAPACITY];
+		weights = [[NSMutableArray alloc] init];
 		
 		for (iter = 0; iter < size; ++iter) {
 			NSNumber	*currentNum = nil;
@@ -36,9 +36,25 @@
 		
 }
 
--(float_t) main_function:(float_t)value {
+-(float_t) main_function:(NSMutableArray*)values {
 	// stub for children implement
 	return 0;
+}
+
+-(NSMutableArray *) weights {
+	return weights;
+}
+
+-(float_t) bias {
+	return bias;
+}
+
+-(void) dealloc {
+	
+	[weights removeAllObjects];
+	[weights release];
+	
+	return [super dealloc];
 }
 
 @end
@@ -46,8 +62,19 @@
 
 @implementation FormalNeuron
 	
--(float_t) main_function:(float_t)value {
-	return (float_t)[self sign_function:value];
+-(float_t) main_function:(NSMutableArray*)values {
+	float_t		totalVal = 0;
+	
+	NSUInteger	count = 0;
+	
+	for (NSNumber *currentValue in values) {
+		totalVal += [currentValue floatValue] * 
+		[[weights objectAtIndex:count] floatValue];
+		//NSLog(@"currentValue is %f", [currentValue floatValue]);
+		count++;
+	}
+	
+	return (totalVal >= bias)?(float_t)[self sign_function:(totalVal - bias)]:0;
 }
 	
 -(int8_t)sign_function : (float_t) value {

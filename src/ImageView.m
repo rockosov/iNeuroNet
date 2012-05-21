@@ -77,8 +77,6 @@ static void DrawPixels (ImageView *owner, NSUInteger scale) {
 	
 	NSUInteger		currentPixelBin = 0;
 	
-	NSLog(@"pixels = %p", [owner pixels]);
-
 	for ( y = [owner bounds].size.height - scale; y >= 0; y -= scale ) {
 		for ( x = 0; x < [owner bounds].size.width; x += scale ) {
 			currentRect.origin.x = x;
@@ -109,7 +107,6 @@ static void DrawPixels (ImageView *owner, NSUInteger scale) {
 	NSRectFill([self bounds]);
 	
 	if (pixels != nil && [pixels count] != 0) {
-		NSLog(@"DrawPixels!");
 		DrawPixels(self, PIXEL_SCALE_SIZE);
 	}
 	DrawGrid(self, PIXEL_SCALE_SIZE);

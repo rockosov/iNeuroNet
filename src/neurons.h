@@ -18,11 +18,13 @@
 		float_t			bias;
 }
 
--(Neuron*)CreateNeuron : (int) weightsSize
+-(Neuron*)InitNeuron : (int) weightsSize
 					   : (float_t) initWeight
 					   : (float_t) initBias;
 
--(float_t)main_function : (float_t) value;
+-(float_t) main_function:(NSMutableArray*)values;
+-(NSMutableArray*) weights;
+-(float_t) bias;
 
 @end 
 

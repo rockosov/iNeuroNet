@@ -34,6 +34,6 @@ PIXEL_IS(Black);
 PIXEL_IS(White);
 
 #define MIN_SCALE_FOR_GRID			4
-#define PIXEL_SCALE_SIZE			4
+#define PIXEL_SCALE_SIZE			8
 
 #endif /* __RGB_H__ */

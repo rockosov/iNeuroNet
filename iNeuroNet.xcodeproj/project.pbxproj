@@ -37,6 +37,7 @@
 		32524113155A86F000C25863 /* 8.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FB155A86F000C25863 /* 8.bmp */; };
 		32524114155A86F000C25863 /* 9.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 325240FC155A86F000C25863 /* 9.bmp */; };
 		326FAEAA1548134000DE8F77 /* NeuronetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */; };
+		3275F5B515653E0A00DEACED /* StrictNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3275F5B415653E0A00DEACED /* StrictNumberFormatter.m */; };
 		329CC529154EFAB2003B196A /* Perceptron.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CC528154EFAB2003B196A /* Perceptron.m */; };
 		32B1B614155D59B7001555D2 /* BmpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1B613155D59B7001555D2 /* BmpView.m */; };
 		32DA59BB154C3E5F00C5C120 /* brain.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32DA59BA154C3E5F00C5C120 /* brain.icns */; };
@@ -98,6 +99,8 @@
 		325240FC155A86F000C25863 /* 9.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 9.bmp; sourceTree = "<group>"; };
 		326FAEA81548134000DE8F77 /* NeuronetAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NeuronetAppDelegate.h; path = src/NeuronetAppDelegate.h; sourceTree = "<group>"; };
 		326FAEA91548134000DE8F77 /* NeuronetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeuronetAppDelegate.m; path = src/NeuronetAppDelegate.m; sourceTree = "<group>"; };
+		3275F5B315653E0A00DEACED /* StrictNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrictNumberFormatter.h; path = src/StrictNumberFormatter.h; sourceTree = "<group>"; };
+		3275F5B415653E0A00DEACED /* StrictNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrictNumberFormatter.m; path = src/StrictNumberFormatter.m; sourceTree = "<group>"; };
 		329CC527154EFAB2003B196A /* Perceptron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Perceptron.h; path = src/Perceptron.h; sourceTree = "<group>"; };
 		329CC528154EFAB2003B196A /* Perceptron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Perceptron.m; path = src/Perceptron.m; sourceTree = "<group>"; };
 		32B1B612155D59B7001555D2 /* BmpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BmpView.h; path = src/BmpView.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3275F5B315653E0A00DEACED /* StrictNumberFormatter.h */,
+				3275F5B415653E0A00DEACED /* StrictNumberFormatter.m */,
 				32B1B612155D59B7001555D2 /* BmpView.h */,
 				32B1B613155D59B7001555D2 /* BmpView.m */,
 				329CC527154EFAB2003B196A /* Perceptron.h */,
@@ -337,6 +342,7 @@
 				329CC529154EFAB2003B196A /* Perceptron.m in Sources */,
 				32394E401551B1B900DFC8D2 /* ImageView.m in Sources */,
 				32B1B614155D59B7001555D2 /* BmpView.m in Sources */,
+				3275F5B515653E0A00DEACED /* StrictNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

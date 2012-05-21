@@ -148,6 +148,7 @@ static void DrawImage (BmpView *owner) {
 
 - (void) drawRect:(NSRect)aRect {
 	if (currentImage == nil) {
+		[pixels removeAllObjects];
 		DrawBanner(self);
 	}
 	else {
