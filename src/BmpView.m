@@ -164,7 +164,7 @@ static void DrawImage (BmpView *owner) {
 	
 	currentImage = targetImage;
 	
-	[self setNeedsDisplay:YES];
+	[self display];
 	
 	return;
 }
@@ -173,7 +173,7 @@ static void DrawImage (BmpView *owner) {
 	
 	pixels = targetPixels;
 	
-	[self setNeedsDisplay:YES];
+	[self display];
 	
 	return;
 }
