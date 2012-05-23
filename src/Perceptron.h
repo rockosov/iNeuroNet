@@ -22,6 +22,8 @@
 	float_t				errorLevel;
 	
 	NSUInteger			era;
+	
+	BOOL				isTrained;
 }
 
 -(Perceptron*)InitPerceptron : (NSUInteger) inputLayerNum
@@ -33,18 +35,16 @@
 -(NSMutableArray*) workingLayer;
 -(NSMutableArray*) outputLayer;
 
--(void) setSpeed : (float_t) targetSpeed;
--(float_t) speed;
-
--(void) setEra : (NSUInteger) targetEra;
--(NSUInteger) era;
-
--(void) setErrorLevel : (NSUInteger) targetErrorLevel;
--(float_t) errorLevel;
+@property(nonatomic, assign) float_t speed;
+@property(nonatomic, assign) NSUInteger era;
+@property(nonatomic, assign) float_t errorLevel;
+@property(nonatomic, assign) BOOL isTrained;
 
 -(void) calculateErrorLevel: (NSUInteger) count;
 
 -(void) DoTeachingOnce : (NSMutableArray*) image 
 					  : (int) terminal;
+
+-(int) ClassifiedThis : (NSMutableArray*) image;
 
 @end

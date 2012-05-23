@@ -8,11 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import <CorePlot/CorePlot.h>
-
 #import "ImageView.h"
 #import "BmpView.h"
 #import "Perceptron.h"
+#import "GraphController.h"
 
 @interface neuronetAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow						*window;
@@ -32,25 +31,32 @@
 	IBOutlet NSBox					*automaticBox;
 	IBOutlet NSButton				*runButton;
 	IBOutlet NSButton				*stopButton;
+	BOOL							isStoppedTeachingThread;
+	IBOutlet NSProgressIndicator	*spiningAutomatic;
 	
 	IBOutlet NSBox					*perceptronBox;
-	IBOutlet CPTGraphHostingView	*errorGraphView;
 	IBOutlet NSTextField			*speedField;
 	IBOutlet NSStepper				*speedStepper;
 	IBOutlet NSTextField			*errorLevelField;
 	IBOutlet NSSegmentedControl		*modeSegControl;
 	IBOutlet NSButton				*showPercInfButton;
+	IBOutlet NSTextField			*eraField;
+	IBOutlet NSTextField			*perceptronState;
+	IBOutlet NSTextField			*imageClass;
 	
 	IBOutlet NSWindow				*perceptronInformation;
 	IBOutlet NSTableView			*weightsTable;
 	NSMutableArray					*weightsTableElements;
 	IBOutlet NSButton				*backButton;
+	IBOutlet NSButton				*saveToFileButton;
+	IBOutlet NSButton				*loadFromFileButton;
 	
 	Perceptron						*perceptron;
 	NSUInteger						perceptronILSize;
-	CPTXYGraph						*errorGraph;
+	IBOutlet GraphController		*errorGraph;
+	NSArray							*plotData;
 	
-	BOOL							alreadyAwakeFromNib;
+	IBOutlet NSButton				*resetButton;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -63,6 +69,12 @@
 -(IBAction) showPercInfButtonPressed: (id)sender;
 -(IBAction) backButtonPressed: (id) sender;
 -(IBAction) stepButtonPressed: (id) sender;
+-(IBAction) runButtonPressed: (id) sender;
+-(IBAction) stopButtonPressed: (id) sender;
+-(IBAction) resetButtonPressed: (id) sender;
+-(IBAction) saveToFileButtonPressed: (id) sender;
+-(IBAction) loadFromFileButtonPressed: (id) sender;
+-(void)	teachingProcess;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 - (id)tableView:(NSTableView *)aTableView 

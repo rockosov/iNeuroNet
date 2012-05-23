@@ -17,6 +17,7 @@
 #define DEFAULT_SPEED			0.01
 #define MAXIMUM_SPEED			1.0
 #define DEFAULT_ERROR_VAL		0.0
+#define DEFAULT_ERA_VAL		0
 
 #define WORKING_NEURON_INDEX	0
 static void FillWeightsTable (Perceptron *perceptron, NSTableView *table,
@@ -76,25 +77,40 @@ static int ClassForImageNum (int imageNum) {
 	if (IS_SECOND_CLASS(imageNum)) {
 		class = SECOND_CLASS;
 	}
+	
+	//NSLog(@"For imageNum = %i class = %i", imageNum, class);
 		
 	return class;
 }
+
+static void ShowMessage (NSTextField *owner, 
+							  NSString *message, 
+							  NSColor *color) {
+	NSShadow	*messShadow = [[[NSShadow alloc] init] autorelease];
+	
+	[messShadow setShadowColor:color];
+	[messShadow setShadowBlurRadius:10.0];
+	
+	[owner setTextColor:color];
+	[owner setShadow:messShadow];
+	[owner setStringValue:message];
+	
+	return;
+}
+
 
 @implementation neuronetAppDelegate
 
 @synthesize window;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-}
-
+#define VIEW_MODE				0
+#define TEACHING_MODE			1
 /**
  * @brief различная инициализация объектов формы
  */
--(void) awakeFromNib {
-	[super awakeFromNib];
-	
+-(void) InitNeuronet {
 	[bmpViewer setCurrentImage:nil];
-		
+	
 	// так пришлось сделать из-за дурацкого неработающего деструктора NSView
 	[bmpViewer setPixels:[[NSMutableArray alloc] init]];
 	[imageViewer setPixels:[bmpViewer pixels]];
@@ -112,12 +128,8 @@ static int ClassForImageNum (int imageNum) {
 	[errorLevelField setStringValue:
 	 [[NSNumber numberWithFloat:DEFAULT_ERROR_VAL] stringValue]];
 	
-	errorGraph = [(CPTXYGraph *)[CPTXYGraph alloc] 
-				  initWithFrame:CGRectZero];
-		
-	[errorGraph applyTheme:[CPTTheme themeNamed:kCPTDarkGradientTheme]];
-		
-	errorGraphView.hostedGraph = errorGraph;
+	[eraField setStringValue:
+	 [[NSNumber numberWithInteger:DEFAULT_ERA_VAL] stringValue]];
 	
 	perceptronILSize = [bmpViewer bounds].size.width * 
 	[bmpViewer bounds].size.height / 
@@ -129,8 +141,41 @@ static int ClassForImageNum (int imageNum) {
 				  :0
 				  :[[speedField stringValue] floatValue]];
 	
-	weightsTableElements = [[NSMutableArray alloc] init];
+	[modeSegControl setSelectedSegment:VIEW_MODE];
+	[modeSegControl sendAction:@selector(modeSegControlSelector:)
+							to:self];
+	
+	[errorGraph erasePlotData];
+	
+	ShowMessage(perceptronState,
+				@"Perceptron isn't trained!", 
+				[NSColor redColor]);
+	
+	ShowMessage(imageClass, 
+				@"", [NSColor redColor]);
+	
+	return;
+}
+
+/**
+ * @brief здесь производим деинициализацию всех объектов формы
+ */
+-(void) CleanupNeuronet {
 		
+	[perceptron release];
+	
+	[[speedField formatter] release];
+	
+	return;
+}
+
+-(void) awakeFromNib {
+	[super awakeFromNib];
+	
+	[self InitNeuronet];
+	
+	weightsTableElements = [[NSMutableArray alloc] init];
+	
 	return;
 }
 
@@ -140,20 +185,12 @@ static int ClassForImageNum (int imageNum) {
 	return YES;
 }
 
-/**
- * @brief здесь производим деинициализацию всех объектов формы
- * @param notification [ in ] - контекст
- */
 -(void) applicationWillTerminate:(NSNotification *)notification {
-	
-	[errorGraphView release];
 
+	[self CleanupNeuronet];
+	
 	// так пришлось сделать из-за дурацкого неработающего деструктора NSView
 	[[bmpViewer pixels] release];
-	
-	[perceptron release];
-	
-	[[speedField formatter] release];
 	
 	[weightsTableElements release];
 	
@@ -161,9 +198,22 @@ static int ClassForImageNum (int imageNum) {
 }
 
 -(void) selectImage:(id)sender {
+	int			retClass = -1;
 	[bmpViewer setCurrentImage: [(NSPopUpButton *)sender title]];
 	
 	[imageViewer setPixels:[bmpViewer pixels]];
+	
+	if ([perceptron isTrained]) {
+		retClass = [perceptron ClassifiedThis:[imageViewer pixels]];
+		ShowMessage(imageClass, 
+					[[NSNumber numberWithInt:retClass + 1] stringValue],
+					[NSColor blueColor]);
+	}
+	else {
+		ShowMessage(imageClass, 
+					@"", [NSColor redColor]);
+	}
+
 		
 	return;
 }
@@ -202,9 +252,6 @@ static int ClassForImageNum (int imageNum) {
 	return;
 }
 
-#define VIEW_MODE				0
-#define TEACHING_MODE			1
-
 -(void) modeSegControlSelector:(id)sender {
 	
 	if ([modeSegControl selectedSegment] == VIEW_MODE) {
@@ -217,16 +264,28 @@ static int ClassForImageNum (int imageNum) {
 		[imageSelector setEnabled:YES];
 		
 		[bmpViewer setCurrentImage:nil];
+		
+		[speedStepper setEnabled:NO];
 	}
 	else {
-		[autoManSegControl setEnabled:YES];
-		[autoManSegControl setSelectedSegment:MANUAL_TEACHING];
-		[stepButton setEnabled:YES];
+		if ([perceptron isTrained]) {
+			NSRunInformationalAlertPanel(@"Error of select!",
+			@"Can't select teaching mode, because perceptron already trained",
+			@"OK", nil, nil);
+			[modeSegControl setSelectedSegment:VIEW_MODE];
+		}
+		else {
+			[autoManSegControl setEnabled:YES];
+			[autoManSegControl setSelectedSegment:MANUAL_TEACHING];
+			[stepButton setEnabled:YES];
 		
-		[imageSelector selectItemAtIndex:1];
-		[imageSelector setEnabled:NO];
+			[imageSelector selectItemAtIndex:1];
+			[imageSelector setEnabled:NO];
 		
-		[bmpViewer setCurrentImage:[imageSelector title]];
+			[bmpViewer setCurrentImage:[imageSelector title]];
+		
+			[speedStepper setEnabled:YES];
+		}
 	}
 	
 	return;
@@ -250,16 +309,19 @@ static int ClassForImageNum (int imageNum) {
 	return;
 }
 
+#define ERROR_END			0
 -(void) stepButtonPressed:(id)sender {
 	int			imageCount = [[imageSelector itemArray] count] - 1;
 	int			iter = 0;
 	
+	ShowMessage(perceptronState, 
+					 @"Perceptron training...", 
+					 [NSColor greenColor]);
+	
 	[spiningManual startAnimation:sender];
 	
 	[perceptron setErrorLevel:0];
-	
-	NSLog(@"errorLevel perceptron = %f", [perceptron errorLevel]);
-	
+		
 	for (iter = 1; iter <= imageCount; ++iter) {
 		[perceptron DoTeachingOnce:[imageViewer pixels]
 						   :ClassForImageNum([[imageSelector title] intValue])];
@@ -272,18 +334,41 @@ static int ClassForImageNum (int imageNum) {
 	
 	[perceptron calculateErrorLevel:imageCount];
 	
-
-	
 	[errorLevelField setStringValue:
 	 [[NSNumber numberWithFloat:[perceptron errorLevel]] stringValue]];
-	
-
-	
+		
 	[imageSelector selectItemAtIndex:1];
+	
 	[perceptron setEra:([perceptron era] + 1)];
+	[eraField setStringValue:
+	 [[NSNumber numberWithInteger:[perceptron era]] stringValue]];
+	
+	[errorGraph addErrorDataAndDisplay:[perceptron era] 
+									  :[perceptron errorLevel]];
+	
 	[bmpViewer setCurrentImage:[imageSelector title]];
 	
 	[spiningManual stopAnimation:sender];
+	
+	if ([perceptron errorLevel] == ERROR_END) {
+		[perceptron setIsTrained:YES];
+		[modeSegControl setSelectedSegment:VIEW_MODE];
+		[modeSegControl sendAction:@selector(modeSegControlSelector:)
+								to:self];
+		ShowMessage(perceptronState, 
+						 @"Perceptron trained!", 
+						 [NSColor blueColor]);
+		ShowMessage(imageClass, 
+					@"", [NSColor blueColor]);
+	}
+	else {
+		ShowMessage(perceptronState,
+						 @"Perceptron isn't trained!", 
+						 [NSColor redColor]);
+		ShowMessage(imageClass, 
+					@"", [NSColor redColor]);
+	}
+
 	
 	return;
 }
@@ -300,6 +385,150 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 								objectAtIndex:(NSUInteger)rowIndex];
 
 	return [row objectForKey:[aTableColumn identifier]];
+}
+
+-(void) teachingProcess {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	do {
+		[stepButton sendAction:@selector(stepButtonPressed:) to:self];
+	} while ([perceptron errorLevel] != ERROR_END && !isStoppedTeachingThread);
+	
+	if ([perceptron errorLevel] == ERROR_END) {
+		[stopButton sendAction:@selector(stopButtonPressed:) to:self];
+
+	}
+	
+	[resetButton setEnabled:YES];
+	
+	[pool release];
+	
+	return;
+}
+
+-(void) runButtonPressed:(id)sender {
+	isStoppedTeachingThread = NO;
+	[autoManSegControl setEnabled:NO];
+	[speedStepper setEnabled:NO];
+	[modeSegControl setEnabled:NO];
+	[showPercInfButton setEnabled:NO];
+	[spiningAutomatic startAnimation:self];
+	[resetButton setEnabled:NO];
+	[NSThread detachNewThreadSelector:@selector(teachingProcess)
+							 toTarget:self withObject:nil];
+	
+	return;
+}
+
+-(void) stopButtonPressed:(id)sender {
+	
+	[autoManSegControl setEnabled:YES];
+	[speedStepper setEnabled:YES];
+	[modeSegControl setEnabled:YES];
+	[showPercInfButton setEnabled:YES];
+	[spiningAutomatic stopAnimation:self];
+	if ([perceptron errorLevel] == ERROR_END) {
+		[modeSegControl setSelectedSegment:VIEW_MODE];
+		[modeSegControl sendAction:@selector(modeSegControlSelector:)
+								to:self];
+		ShowMessage(perceptronState, 
+						 @"Perceptron trained!", 
+						 [NSColor blueColor]);
+		ShowMessage(imageClass, 
+					@"", [NSColor blueColor]);
+	}
+	else {
+		ShowMessage(perceptronState,
+						 @"Perceptron isn't trained!", 
+						 [NSColor redColor]);
+		ShowMessage(imageClass, 
+					@"", [NSColor redColor]);
+	}
+	
+	isStoppedTeachingThread = YES;
+
+	return;
+}
+
+-(void) resetButtonPressed:(id)sender {
+	[self CleanupNeuronet];
+	
+	[self InitNeuronet];
+	
+	return;
+}
+
+-(void) saveToFileButtonPressed:(id)sender {
+	FormalNeuron			*workingNeuron = [[perceptron workingLayer] 
+											objectAtIndex:WORKING_NEURON_INDEX];
+	NSMutableArray			*weights = [workingNeuron weights];
+	
+	NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
+														 NSUserDomainMask, YES);
+	NSString *documentsDirectory = [path objectAtIndex:0];
+		
+	NSString *weightsFilename = [documentsDirectory 
+							stringByAppendingPathComponent:@"weights.plist"];
+	
+	[weights writeToFile:weightsFilename atomically:YES];
+	
+	NSRunInformationalAlertPanel(@"Save weights",
+					@"Successfully save to documents directory!",
+					@"OK", 
+					nil, 
+					nil);
+	
+	return;
+}
+
+-(void) loadFromFileButtonPressed:(id)sender {
+	FormalNeuron			*workingNeuron = [[perceptron workingLayer] 
+											objectAtIndex:WORKING_NEURON_INDEX];
+	NSMutableArray			*weights = [workingNeuron weights];
+	
+	NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
+														NSUserDomainMask, YES);
+	NSString *documentsDirectory = [path objectAtIndex:0];
+	
+	NSString *weightsFilename = [documentsDirectory 
+							stringByAppendingPathComponent:@"weights.plist"];
+	
+	BOOL fileExists = 
+		[[NSFileManager defaultManager] fileExistsAtPath:weightsFilename];
+	
+	if (!fileExists) {
+		NSRunCriticalAlertPanel(@"Load weights",
+									 @"File weights.plist doesn't exist!",
+									 @"OK", 
+									 nil, 
+									 nil);
+		return;
+	}
+	
+	NSArray		*temp = [[NSArray alloc] 
+								 initWithContentsOfFile:weightsFilename];
+	
+	if ([temp count] != [weights count]) {
+		NSRunCriticalAlertPanel(@"Load weights",
+								@"Wrong count of weights!",
+								@"OK", 
+								nil, 
+								nil);
+		[temp release];
+	}
+	else {
+		[weights removeAllObjects];
+		[weights addObjectsFromArray:temp];
+		NSRunInformationalAlertPanel(@"Load weights",
+								@"Successfully load from documents directory!",
+									 @"OK", 
+									 nil, 
+									 nil);
+		FillWeightsTable(perceptron, weightsTable, weightsTableElements);
+		[temp release];
+	}
+
+	return;
 }
 
 @end

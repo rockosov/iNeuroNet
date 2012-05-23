@@ -31,35 +31,10 @@
 	return outputLayer;
 }
 
--(void) setSpeed: (float_t)targetSpeed {
-	speed = targetSpeed;
-	
-	return;
-}
-
--(void) setEra:(NSUInteger)targetEra {
-	era = targetEra;
-	
-	return;
-}
-
--(NSUInteger) era {
-	return era;
-}
-
--(float_t) speed {
-	return speed;
-}
-
--(void) setErrorLevel:(NSUInteger)targetErrorLevel {
-	errorLevel = targetErrorLevel;
-	
-	return;
-}
-
--(float_t) errorLevel {
-	return errorLevel;
-}
+@synthesize speed;
+@synthesize era;
+@synthesize errorLevel;
+@synthesize isTrained;
 
 -(Perceptron*)InitPerceptron : (NSUInteger)inputLayerNum
 								 : (NSUInteger)workingLayerNum
@@ -67,6 +42,7 @@
 								 : (float_t)targetSpeed {
 	FormalNeuron			*currentFormalNeuron = nil;
 	
+	/*
 	NSLog(@"Init with inputLayerNum = %u,\
 		  workingLayerNum = %u,\
 		  outputLayerNum = %u,\
@@ -75,6 +51,7 @@
 		  workingLayerNum,
 		  outputLayerNum,
 		  targetSpeed);
+	 */
 	
 	if (self = [super init]) {
 		inputLayer = [[NSMutableArray alloc] init];
@@ -107,6 +84,8 @@
 		speed = targetSpeed;
 		
 		errorLevel = 0;
+		
+		isTrained = NO;
 	}
 	
 	return self;
@@ -125,8 +104,7 @@
 	return;
 }
 
--(void) DoTeachingOnce:(NSMutableArray *)image 
-					 :(int)terminal {
+-(int) ClassifiedThis:(NSMutableArray *)image {
 	NSMutableArray		*secondaryVals = [[NSMutableArray alloc] init];
 	int					retVal;
 	NSUInteger			count = 0;
@@ -140,17 +118,26 @@
 		currentSecondaryVal = [NSNumber numberWithFloat:
 							   [currentNeuron main_function:
 								[NSMutableArray arrayWithObject:currentValue]]];
-		
-		//NSLog(@"currentSecondaryVal = %f", [currentSecondaryVal floatValue]);
-		
+				
 		[secondaryVals addObject:currentSecondaryVal];
 		count++;
 	}
 	
 	retVal = [[workingLayer objectAtIndex:0] main_function:secondaryVals];
 	
+	[secondaryVals release];
 	
-	count = 0;
+	return retVal;
+	
+}
+
+-(void) DoTeachingOnce:(NSMutableArray *)image 
+					 :(int)terminal {
+	int		count = 0;
+	int		retVal = 0;
+
+	retVal = [self ClassifiedThis:image];
+	
 	for (NSNumber *currentValue in image) {
 		FormalNeuron		*workingNeuron = [workingLayer objectAtIndex:0];
 		float_t				currentWeight = [[[workingNeuron weights] 
@@ -170,27 +157,20 @@
 	}
 	
 	errorLevel += (retVal - terminal) * (retVal - terminal);
-	
-	
-	[secondaryVals release];
+
 	
 	return;
 }
 
 -(void) calculateErrorLevel:(NSUInteger)count {
-	NSLog(@"errorLevel = %f", errorLevel);
 	errorLevel /= count;
-	NSLog(@"errorLevel = %f", errorLevel);
 	errorLevel = sqrt(errorLevel);
-	NSLog(@"errorLevel = %f", errorLevel);
-	NSLog(@"!!!");
 	
 	return;
 }
 
 -(void) dealloc {
 	
-	NSLog(@"%p", inputLayer);
 	for (FormalNeuron *currentFormalNeuron in inputLayer) {
 		[currentFormalNeuron release];
 	}
