@@ -20,13 +20,13 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSMainNibFile</key>
 	<string>iNeuroNet</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2012 rockosov TIT_SFEDU. All rights reserved.</string>
 </dict>
 </plist>
