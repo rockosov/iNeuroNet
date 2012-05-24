@@ -14,6 +14,8 @@
 	NSMutableArray	*pixels;
 	
 	ImageView		*dependenceImageView;
+	
+	NSUInteger		pixelsScale;
 }
 
 -(void) setCurrentImage: (NSString*) targetImage;
@@ -21,5 +23,7 @@
 -(NSString*) currentImage;
 -(NSMutableArray *) pixels;
 -(void) setDependenceImageView: (ImageView*) targetImageView;
+
+@property(nonatomic, assign) NSUInteger pixelsScale;
 
 @end

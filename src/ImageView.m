@@ -107,9 +107,9 @@ static void DrawPixels (ImageView *owner, NSUInteger scale) {
 	NSRectFill([self bounds]);
 	
 	if (pixels != nil && [pixels count] != 0) {
-		DrawPixels(self, PIXEL_SCALE_SIZE);
+		DrawPixels(self, pixelsScale);
 	}
-	DrawGrid(self, PIXEL_SCALE_SIZE);
+	DrawGrid(self, pixelsScale);
 	
 	return;
 }
@@ -124,5 +124,7 @@ static void DrawPixels (ImageView *owner, NSUInteger scale) {
 -(NSMutableArray *) pixels {
 	return pixels;
 }
+
+@synthesize pixelsScale;
 
 @end

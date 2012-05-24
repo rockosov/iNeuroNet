@@ -9,9 +9,13 @@
 
 @interface ImageView : NSView {
 	NSMutableArray	*pixels;
+	
+	NSUInteger		pixelsScale;
 }
 
 -(void) setPixels: (NSMutableArray*) targetPixels;
 -(NSMutableArray*) pixels;
+
+@property(nonatomic, assign) NSUInteger pixelsScale;
 
 @end

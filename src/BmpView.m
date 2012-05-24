@@ -104,12 +104,13 @@ static void FillPixels (NSImage *targetImage, BmpView *owner) {
 	
 	[[owner pixels] removeAllObjects];
 	
-	for ( y = 0; y < [bitmapImageRep pixelsHigh]; y += PIXEL_SCALE_SIZE ) {
-		for ( x = 0; x < [bitmapImageRep pixelsWide]; x += PIXEL_SCALE_SIZE ) {
+	for ( y = 0; y < [bitmapImageRep pixelsHigh]; y += [owner pixelsScale] ) {
+		for ( x = 0; x < [bitmapImageRep pixelsWide]; 
+			 x += [owner pixelsScale] ) {
 			pixelBin = [NSNumber numberWithUnsignedInteger:
 						GetCurrentPixelBin(x,
 										   y, 
-										   PIXEL_SCALE_SIZE,
+										   [owner pixelsScale],
 										   bitmapImageRep)];
 			[[owner pixels] addObject:pixelBin];
 		}
@@ -191,5 +192,7 @@ static void DrawImage (BmpView *owner) {
 	
 	return;
 }
+
+@synthesize pixelsScale;
 
 @end

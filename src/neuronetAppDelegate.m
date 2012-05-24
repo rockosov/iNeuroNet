@@ -105,11 +105,45 @@ static void ShowMessage (NSTextField *owner,
 
 #define VIEW_MODE				0
 #define TEACHING_MODE			1
+
+#define FOUR_APPR_MODE			0
+#define FOUR					4
+#define EIGHT_APPR_MODE			1
+#define EIGHT					8
+#define SIXTEEN_APPR_MODE		2
+#define SIXTEEN					16
+#define SCALE_FOR_SEGMENT(x, y)	switch(x){					\
+								case FOUR_APPR_MODE:		\
+									y = FOUR;				\
+									break;					\
+								case EIGHT_APPR_MODE:		\
+									y = EIGHT;				\
+									break;					\
+								default:					\
+									y = SIXTEEN;			\
+									break;					\
+								}
+
+#define SEGMENT_FOR_SCALE(x,y) switch(x){					\
+							   case FOUR:					\
+									y = FOUR_APPR_MODE;		\
+									break;					\
+							   case EIGHT:					\
+									y = EIGHT_APPR_MODE;	\
+									break;					\
+							   default:						\
+									y = SIXTEEN_APPR_MODE;	\
+									break;					\
+							   }
+
 /**
  * @brief различная инициализация объектов формы
  */
 -(void) InitNeuronet {
 	[bmpViewer setCurrentImage:nil];
+	
+	[bmpViewer setPixelsScale:pixelsScale];
+	[imageViewer setPixelsScale:pixelsScale];
 	
 	// так пришлось сделать из-за дурацкого неработающего деструктора NSView
 	[bmpViewer setPixels:[[NSMutableArray alloc] init]];
@@ -133,7 +167,7 @@ static void ShowMessage (NSTextField *owner,
 	
 	perceptronILSize = [bmpViewer bounds].size.width * 
 	[bmpViewer bounds].size.height / 
-	(PIXEL_SCALE_SIZE * PIXEL_SCALE_SIZE);
+	(pixelsScale * pixelsScale);
 	
 	perceptron = [[Perceptron alloc]InitPerceptron
 				  :perceptronILSize
@@ -172,6 +206,7 @@ static void ShowMessage (NSTextField *owner,
 -(void) awakeFromNib {
 	[super awakeFromNib];
 	
+	SCALE_FOR_SEGMENT(EIGHT_APPR_MODE, pixelsScale);
 	[self InitNeuronet];
 	
 	weightsTableElements = [[NSMutableArray alloc] init];
@@ -266,6 +301,8 @@ static void ShowMessage (NSTextField *owner,
 		[bmpViewer setCurrentImage:nil];
 		
 		[speedStepper setEnabled:NO];
+		
+		[approximationSegControl setEnabled:YES];
 	}
 	else {
 		if ([perceptron isTrained]) {
@@ -285,6 +322,8 @@ static void ShowMessage (NSTextField *owner,
 			[bmpViewer setCurrentImage:[imageSelector title]];
 		
 			[speedStepper setEnabled:YES];
+			
+			[approximationSegControl setEnabled:NO];
 		}
 	}
 	
@@ -450,10 +489,26 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	return;
 }
 
+#define CANCEL		0
+#define RESET		1
 -(void) resetButtonPressed:(id)sender {
-	[self CleanupNeuronet];
+	int choice = NSRunInformationalAlertPanel(@"Reset Dialog",
+											  @"Are you sure reset perceptron?",
+											  @"Resest",
+											  @"Cancel",
+											  nil);
 	
-	[self InitNeuronet];
+	if (choice == RESET) {
+		[self CleanupNeuronet];
+		
+		[self InitNeuronet];
+		
+		isResetted = YES;
+		
+		return;
+	}
+
+	isResetted = NO;
 	
 	return;
 }
@@ -528,6 +583,24 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 		[temp release];
 	}
 
+	return;
+}
+
+-(void) approximationSegControlSelector:(id)sender {
+	isResetted = NO;
+	
+	NSUInteger backupPixels = pixelsScale;
+	NSInteger segment = -1;
+	SCALE_FOR_SEGMENT([approximationSegControl selectedSegment], pixelsScale);
+	
+	[resetButton sendAction:@selector(resetButtonPressed:) to:self];
+	
+	if (!isResetted) {
+		SEGMENT_FOR_SCALE(backupPixels, segment);
+		[approximationSegControl setSelectedSegment:segment];
+		pixelsScale = backupPixels;
+	}
+	
 	return;
 }
 

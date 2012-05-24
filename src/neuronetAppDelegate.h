@@ -20,6 +20,8 @@
 	IBOutlet BmpView				*bmpViewer;
 	IBOutlet ImageView				*imageViewer;
 	IBOutlet NSPopUpButton			*imageSelector;
+	IBOutlet NSSegmentedControl		*approximationSegControl;
+	int								pixelsScale;
 	
 	IBOutlet NSBox					*teachingBox;
 	IBOutlet NSSegmentedControl		*autoManSegControl;
@@ -57,6 +59,7 @@
 	NSArray							*plotData;
 	
 	IBOutlet NSButton				*resetButton;
+	BOOL							isResetted;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -74,6 +77,7 @@
 -(IBAction) resetButtonPressed: (id) sender;
 -(IBAction) saveToFileButtonPressed: (id) sender;
 -(IBAction) loadFromFileButtonPressed: (id) sender;
+-(IBAction) approximationSegControlSelector: (id) sender;
 -(void)	teachingProcess;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
